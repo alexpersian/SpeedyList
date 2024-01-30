@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import OSLog
 
 // TODO: Investigate warning in logs: "nw_connection_add_timestamp_locked_on_nw_queue [C2] Hit maximum timestamp count, will start dropping events"
 
@@ -15,6 +16,10 @@ struct ItemView: View {
     var body: some View {
         VStack(alignment: .leading, content: {
             ItemImageView(model: URL(string: model.imageURL))
+            // Experiment using in-memory cache for images.
+//            Image(uiImage: model.image)
+//                .resizable()
+//                .frame(width: 200, height: 200)
             Text(model.name.capitalized).font(.headline)
             Text("Num: " + formatNumber(model.id)).font(.caption)
             Text("Type: " + formatTypes(model.types)).font(.caption)
@@ -42,7 +47,11 @@ struct ItemImageView: View {
         AsyncImage(
             url: model,
             scale: 3,
-            content: { image in image.resizable() },
+            content: { image in
+//                let _ = Logger().log(level: .debug, "Cache mem: \(URLCache.shared.currentMemoryUsage)")
+//                let _ = Logger().log(level: .debug, "Cache disk: \(URLCache.shared.currentDiskUsage)")
+                image.resizable()
+            },
             placeholder: { ProgressView() }
         )
         .frame(width: 200, height: 200)

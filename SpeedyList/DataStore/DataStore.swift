@@ -18,7 +18,7 @@ final class DataStore {
     private let processor: ModelProcessor
     private let logger = Logger()
 
-    private var container: PokemonContainer = [:]
+    private var container = PokemonContainer()
 
     init(provider: DataProvider, processor: ModelProcessor) {
         self.provider = provider

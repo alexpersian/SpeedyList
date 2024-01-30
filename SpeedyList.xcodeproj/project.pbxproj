@@ -27,6 +27,8 @@
 		EAB122AB2B64348C0012B25D /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB122AA2B64348C0012B25D /* ItemView.swift */; };
 		EACA8A112B656095005E654F /* mock_pokemon_bulbasaur.json in Resources */ = {isa = PBXBuildFile; fileRef = EACA8A102B656095005E654F /* mock_pokemon_bulbasaur.json */; };
 		EACA8A152B670F39005E654F /* ModelProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA8A142B670F39005E654F /* ModelProcessor.swift */; };
+		EACA8A172B6726DF005E654F /* FileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA8A162B6726DF005E654F /* FileStore.swift */; };
+		EACA8A1B2B684042005E654F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA8A1A2B684042005E654F /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		EAB122AA2B64348C0012B25D /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		EACA8A102B656095005E654F /* mock_pokemon_bulbasaur.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_pokemon_bulbasaur.json; sourceTree = "<group>"; };
 		EACA8A142B670F39005E654F /* ModelProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProcessor.swift; sourceTree = "<group>"; };
+		EACA8A162B6726DF005E654F /* FileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStore.swift; sourceTree = "<group>"; };
+		EACA8A1A2B684042005E654F /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +125,13 @@
 		EA8802E12B5C87AE00A467E2 /* SpeedyList */ = {
 			isa = PBXGroup;
 			children = (
+				EA8802E22B5C87AE00A467E2 /* AppDelegate.swift */,
+				EA8802E42B5C87AE00A467E2 /* SceneDelegate.swift */,
 				EA88031D2B5EE53300A467E2 /* Assets */,
 				EAB122AC2B6458F30012B25D /* Models */,
 				EA8803192B5DB3BF00A467E2 /* DataStore */,
 				EA8803182B5DB3B900A467E2 /* ViewControllers */,
 				EA8803172B5DB3B200A467E2 /* Views */,
-				EA8802E22B5C87AE00A467E2 /* AppDelegate.swift */,
-				EA8802E42B5C87AE00A467E2 /* SceneDelegate.swift */,
 			);
 			path = SpeedyList;
 			sourceTree = "<group>";
@@ -172,6 +176,8 @@
 				EAB122A82B6321980012B25D /* DataStore.swift */,
 				EA8803222B5F4C1400A467E2 /* DataProvider.swift */,
 				EACA8A142B670F39005E654F /* ModelProcessor.swift */,
+				EACA8A162B6726DF005E654F /* FileStore.swift */,
+				EACA8A1A2B684042005E654F /* ImageCache.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -341,9 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACA8A1B2B684042005E654F /* ImageCache.swift in Sources */,
 				EACA8A152B670F39005E654F /* ModelProcessor.swift in Sources */,
 				EAB122A52B631AD80012B25D /* Section.swift in Sources */,
 				EA8802E72B5C87AE00A467E2 /* ListViewController.swift in Sources */,
+				EACA8A172B6726DF005E654F /* FileStore.swift in Sources */,
 				EA8803232B5F4C1400A467E2 /* DataProvider.swift in Sources */,
 				EA8802ED2B5C87AE00A467E2 /* SpeedyList.xcdatamodeld in Sources */,
 				EAB122A32B631A590012B25D /* Pokemon.swift in Sources */,
